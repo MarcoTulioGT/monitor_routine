@@ -1,3 +1,9 @@
 *.ini
 
 *.jar
+
+*.exe
+
+*.log
+
+*pyc
