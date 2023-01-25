@@ -1,7 +1,10 @@
 # Project Monitor routine
 
 ## Backgroud browser
-#### Change the parameter in the file create_routine.py ''chrome_options.headless = False to True''
+
+#### Change the parameter in the file create_routine.py 
+
+```chrome_options.headless = False to True```
 
 
 #step 1
