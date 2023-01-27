@@ -2,7 +2,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
-def inhouseweb_display_default(driver, url, timer):
+from screenshot import take_screenshot
+
+def inhouseweb_display_default(driver, url, timer, screen):
 
 
     driver.get(url)
@@ -18,3 +20,6 @@ def inhouseweb_display_default(driver, url, timer):
     time.sleep(timer)
     driver.execute_script("arguments[0].click();", elem)
     time.sleep(timer)
+
+    #take a full screen
+    take_screenshot(driver, screen)

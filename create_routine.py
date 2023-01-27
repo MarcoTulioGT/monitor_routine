@@ -21,10 +21,10 @@ driver = webdriver.Chrome(urls["DRIVER"], chrome_options=chrome_options, service
 
 correo_destino = accesos["correo_destino"]
 
-#grafana_display_default(driver, urls["URL_METRICAS"], 120, accesos["usr_graf_docker"], accesos["pass_graf_docker"])
-#elastic_display_default(driver, urls["URL_HIPERION"], 20, accesos["usr_ekl_hiperion"],accesos["pass_ekl_hiperion"])
-#elastic_display_default(driver, urls["URL_FENIX"], 20, accesos["usr_ekl_fenix2"],accesos["pass_ekl_fenix2"])
-#elastic_display_default(driver, urls["URL_KANSAS"], 20, accesos["usr_ekl_kansas"],accesos["pass_ekl_kansas"])
-#instana_display_default(driver, urls["URL_INSTANA"], 20, accesos["usr_instana"],accesos["pass_instana"])
-#solarwinds_display_default(driver, urls["URL_SOLARWINDS"], 20, accesos["usr_sam"], accesos["pass_sam"])
-inhouseweb_display_default(driver, urls["URL_KPI"], 10)
+grafana_display_default(driver, urls["URL_METRICAS"], 60, accesos["usr_graf_docker"], accesos["pass_graf_docker"], 'grafana_display_default.png')
+elastic_display_default(driver, urls["URL_HIPERION"], 60, accesos["usr_ekl_hiperion"],accesos["pass_ekl_hiperion"],'elastic_display_hiperion.png')
+elastic_display_default(driver, urls["URL_FENIX"], 60, accesos["usr_ekl_fenix2"],accesos["pass_ekl_fenix2"],'elastic_display_fenix.png')
+elastic_display_default(driver, urls["URL_KANSAS"], 60, accesos["usr_ekl_kansas"],accesos["pass_ekl_kansas"], 'elastic_display_kansas.png')
+instana_display_default(driver, urls["URL_INSTANA"], 60, accesos["usr_instana"],accesos["pass_instana"],'instana_display_default.png')
+solarwinds_display_default(driver, urls["URL_SOLARWINDS"], 30, accesos["usr_sam"], accesos["pass_sam"], 'solarwinds_display_default.png')
+inhouseweb_display_default(driver, urls["URL_KPI"], 10,'inhouseweb_display_default.png')

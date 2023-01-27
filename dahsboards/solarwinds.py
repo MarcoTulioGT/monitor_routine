@@ -2,11 +2,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
+from screenshot import take_screenshot
 
-def solarwinds_display_default(driver, url, timer, user, passwd):
+def solarwinds_display_default(driver, url, timer, user, passwd,screen):
 
 
-    #ob2 = Screenshot_Clipping.Screenshot()
 
     driver.get(url)
     time.sleep(timer)
@@ -19,4 +19,6 @@ def solarwinds_display_default(driver, url, timer, user, passwd):
     driver.maximize_window()
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(timer)
-    #img_url2 = ob2.full_Screenshot(driver, save_path=path_url, image_name='SolarWindsDashboard.png')
+
+    #take a full screen
+    take_screenshot(driver, screen)

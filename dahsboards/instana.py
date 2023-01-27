@@ -2,8 +2,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
+from screenshot import take_screenshot
 
-def instana_display_default(driver, url, timer, user, passwd):
+
+def instana_display_default(driver, url, timer, user, passwd, screen):
     driver.get(url)
     driver.maximize_window()
     driver.execute_script("document.body.style.zoom='65%'")
@@ -15,3 +17,6 @@ def instana_display_default(driver, url, timer, user, passwd):
     elem = driver.find_element(By.CLASS_NAME,"in-button")
     elem.send_keys(Keys.ENTER)
     time.sleep(timer)
+
+    #take a full screen
+    take_screenshot(driver, screen)
