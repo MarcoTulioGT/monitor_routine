@@ -1,0 +1,17 @@
+Buenos días,
+
+Adjunto revisión de rutina correspondiente al día #FECHA en la cual no se observa ningún inconveniente, los puntos a validar fueron:
+
+1. Dashboard SolarWinds 
+2. Dashboard Metricas
+3. Dashboard Errores 50X en APIS
+4. Dashboard KPI’s
+2. Dashboard Apigee tigo_mobile_gt_upselling_v2
+3. Dashboard Apigee tigo_mobile_gt_roaming_v1
+4. Dashboard Apigee tigo_mobile_gt_billing_v2
+5. Dashboard Apigee tigo_mobile_gt_atpa_v2
+6. Dashboard SSIT Kibana
+7. Dashboard GRAFANA Docker
+
+Saludos,
+

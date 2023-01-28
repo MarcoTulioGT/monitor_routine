@@ -6,6 +6,8 @@ from dahsboards.instana import instana_display_default
 from dahsboards.solarwinds import solarwinds_display_default
 from dahsboards.inhouseweb import inhouseweb_display_default
 from create_pdf import generate_html
+from send_email import configuracion
+
 
 #file properties
 config = configparser.ConfigParser(interpolation=None)
@@ -14,13 +16,16 @@ config.read('properties.ini')
 urls = config["URLS"]
 accesos = config["ACCESOS"]
 
-Driver selenium
+
+configuracion()
+
+#Driver selenium
 chrome_options = webdriver.ChromeOptions()
-chrome_options.headless = False
+chrome_options.headless = True
 driver = webdriver.Chrome(urls["DRIVER"], chrome_options=chrome_options, service_args=['--verbose', '--log-path=chrome.log'])
 
 
-correo_destino = accesos["correo_destino"]
+
 
 grafana_display_default(driver, urls["URL_METRICAS"], 60, accesos["usr_graf_docker"], accesos["pass_graf_docker"], 'Metricas_alertas_SMS.png')
 elastic_display_default(driver, urls["URL_HIPERION"], 60, accesos["usr_ekl_hiperion"],accesos["pass_ekl_hiperion"],'Metricas_hiperion.png')
@@ -29,5 +34,9 @@ elastic_display_default(driver, urls["URL_KANSAS"], 60, accesos["usr_ekl_kansas"
 instana_display_default(driver, urls["URL_INSTANA"], 60, accesos["usr_instana"],accesos["pass_instana"],'Metricas_instana.png')
 solarwinds_display_default(driver, urls["URL_SOLARWINDS"], 40, accesos["usr_sam"], accesos["pass_sam"], 'Alertas_solarwinds.png')
 inhouseweb_display_default(driver, urls["URL_KPI"], 20,'KPI_regional.png')
+
+driver.close()
+driver.quit()
+
 
 generate_html(accesos["html_title"], accesos["html_description"])
