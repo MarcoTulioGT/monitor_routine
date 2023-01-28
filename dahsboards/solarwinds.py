@@ -16,7 +16,7 @@ def solarwinds_display_default(driver, url, timer, user, passwd,screen):
     elem.send_keys(passwd)
     elem = driver.find_element(By.CLASS_NAME, "sw-btn-primary")
     elem.send_keys(Keys.ENTER)
-    driver.maximize_window()
+    #driver.maximize_window()
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(timer)
 

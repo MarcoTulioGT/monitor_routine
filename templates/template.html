@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+
+     <link rel="stylesheet" href="site.css">
+
+</head>
+<body>
+<div><img id="logo" src="logo.png"alt="Tigo"> <h1>{{ h1 }}</h1> </div>
+<br>
+<br>
+
+<div>
+    {%for image in images %}
+        <h2>{{image.name}}</h2>
+        <img src="../images/{{image.path}}"alt="{{ image.name }}" >
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endfor %}
+</div>
+
+<div>
+
+</div>
+</body>
+</html>
