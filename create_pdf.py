@@ -26,8 +26,8 @@ def generate_html(title, description):
 
 
 def generate_pdf():
-    pass
-    #path_wkhtmlopdf = "C:\Program Files\wkhtmltopdf\bin"
-    #config = pdfkit.configuration(wkhtmltopdf=path_wkhtmlopdf)
-    #with open("./html/index.html") as f:
-    #    pdfkit.from_file(f, './reports/rpt_itbackend_27_01_2023.pdf',configuration=config)
+    #pass
+    path_wkhtmlopdf = "wkhtmltopdf"
+    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmlopdf)
+    with open("./html/index.html") as f:
+        pdfkit.from_file(f, './reports/rpt_itbackend_27_01_2023.pdf',configuration=config)
