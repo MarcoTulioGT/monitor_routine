@@ -10,8 +10,15 @@
 
 *png
 
-/html/body.txt
-/html/index.html
-
-
 *.sh
+
+# exclude everything
+images/*
+reports/*
+html/*
+
+# exception to the rule
+!images/.gitkeep
+!reports/.gitkeep
+!html/site.css
+logo.png
