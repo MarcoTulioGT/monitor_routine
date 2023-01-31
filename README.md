@@ -9,7 +9,7 @@
 
 # step 1
 
-#### add file properties.ini with following structure
+#### create file properties.ini with following structure
 
 ---------------------------------------------------------
 
@@ -27,6 +27,9 @@
 #### from = 
 
 ----------------------------------------------------------
+
+### create three directories empty index/ , reports/ and images/
+### create empty file into index/ with the name index.html
 
 ### Download the selenium driver in the next url https://chromedriver.chromium.org/downloads
 
