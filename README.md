@@ -16,9 +16,7 @@
 ### [URLS]
 #### DRIVER = path
 
-
 ### [ACCESOS]
-
 
 #### html_title = 
 #### html_description = 
@@ -28,8 +26,9 @@
 
 ----------------------------------------------------------
 
-### create three directories empty index/ , reports/ and images/
-### create empty file into index/ with the name index.html
+### create three directories empty html/ , reports/ and images/
+
 
 ### Download the selenium driver in the next url https://chromedriver.chromium.org/downloads
+### Download the library wkhtmltopdf from this url https://wkhtmltopdf.org/downloads.html
 
