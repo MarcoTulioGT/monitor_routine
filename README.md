@@ -9,7 +9,7 @@
 
 # step 1
 
-#### add file properties.ini with folloing structure
+#### add file properties.ini with following structure
 
 ---------------------------------------------------------
 

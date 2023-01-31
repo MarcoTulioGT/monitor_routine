@@ -8,7 +8,7 @@ def elastic_display_default(driver, url, timer, user, passwd, screen):
 
 
     driver.get(url)
-    time.sleep(timer/6)
+    time.sleep(timer)
     driver.maximize_window()
     driver.execute_script("document.body.style.zoom='65%'")
     elem = driver.find_element("name", "username")

@@ -21,7 +21,7 @@ configuracion()
 
 #Driver selenium
 chrome_options = webdriver.ChromeOptions()
-chrome_options.headless = True
+chrome_options.headless = False
 driver = webdriver.Chrome(urls["DRIVER"], chrome_options=chrome_options, service_args=['--verbose', '--log-path=chrome.log'])
 
 

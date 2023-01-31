@@ -1,0 +1,28 @@
+body {
+  display:block!important;
+  background-color: #00377b;
+  color: whitesmoke;
+  align-content: center;
+}
+
+h1 {
+  margin-left: 30%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  padding-left: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+img[src="logo.png"] {
+  padding-left: 2%;
+  padding-top: 0%;
+  width: 75px;
+}
+
+img {
+  padding-left: 1%;
+  border-radius: 30px;
+}
