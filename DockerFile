@@ -6,6 +6,7 @@ RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd6
 RUN  apt-get install ./google-chrome-stable_current_amd64.deb -y
 RUN apt-get install -y chromium-browser
 RUN apt-get install -y python3 && apt-get install -y pip
+COPY requirements.txt /opt/app/requirements.txt
 WORKDIR /opt/app
 RUN pip install -r requirements.txt
 COPY monitor_routine /opt/app/
