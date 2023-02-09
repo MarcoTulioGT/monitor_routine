@@ -1,0 +1,18 @@
+FROM ubuntu:lunar
+RUN apt-get update &&  apt install -y libnss3
+RUN apt -f install -y
+RUN apt-get install -y wget
+RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN  apt-get install ./google-chrome-stable_current_amd64.deb -y
+RUN apt-get install -y chromium-browser
+RUN apt-get install -y python3 && apt-get install -y pip
+COPY requirements.txt /opt/app/requirements.txt
+WORKDIR /opt/app
+RUN pip install -r requirements.txt
+COPY monitor_routine /opt/app/
+RUN apt-get install locales -y
+RUN  cd /usr/share/locales && ./install-language-pack es_GT.UTF-8
+RUN  dpkg-reconfigure locales
+RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb -y && dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb -y
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb -y && apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb -y
+RUN apt-get install mutt && apt-get install sendmail
