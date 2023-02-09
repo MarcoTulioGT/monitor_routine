@@ -31,4 +31,4 @@
 
 ### Download the selenium driver in the next url https://chromedriver.chromium.org/downloads
 ### Download the library wkhtmltopdf from this url https://wkhtmltopdf.org/downloads.html
-
+https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf

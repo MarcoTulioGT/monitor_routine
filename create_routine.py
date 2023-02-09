@@ -6,7 +6,7 @@ from dahsboards.instana import instana_display_default
 from dahsboards.solarwinds import solarwinds_display_default
 from dahsboards.inhouseweb import inhouseweb_display_default
 from create_pdf import generate_html
-from send_email import configuracion
+
 
 
 #file properties
@@ -17,7 +17,7 @@ urls = config["URLS"]
 accesos = config["ACCESOS"]
 
 
-configuracion()
+
 
 #Driver selenium
 chrome_options = webdriver.ChromeOptions()
@@ -40,3 +40,5 @@ driver.quit()
 
 
 generate_html(accesos["html_title"], accesos["html_description"])
+
+
