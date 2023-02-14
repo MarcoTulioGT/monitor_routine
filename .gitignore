@@ -12,6 +12,8 @@
 
 *.sh
 
+test*.py
+
 # exclude everything
 images/*
 reports/*
@@ -22,3 +24,5 @@ html/*
 !reports/.gitkeep
 !html/site.css
 logo.png
+
+

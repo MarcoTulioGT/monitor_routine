@@ -21,7 +21,10 @@ accesos = config["ACCESOS"]
 
 #Driver selenium
 chrome_options = webdriver.ChromeOptions()
-chrome_options.headless = False
+chrome_options.headless = accesos["crhome_headless"]
+chrome_options.add_argument("--no-sandbox");
+chrome_options.add_argument("--disable-dev-shm-usage");
+
 driver = webdriver.Chrome(urls["DRIVER"], chrome_options=chrome_options, service_args=['--verbose', '--log-path=chrome.log'])
 
 
